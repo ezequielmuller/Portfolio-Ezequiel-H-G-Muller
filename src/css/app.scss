@@ -1,6 +1,9 @@
 // app global css in SCSS form
+$fundo: #e7e7e7;
+$textos: rgb(18, 17, 22);
 body {
-  background-color: rgb(18, 17, 22);
+  // background-color: rgb(18, 17, 22);
+  background-color: $fundo;
 }
 // Fundo
 .video-background {
@@ -23,7 +26,7 @@ body {
 
 // Barra superior
 .transparent-header {
-  color: darkgray;
+  color: $textos;
   background: transparent;
   // background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
   box-shadow: none;

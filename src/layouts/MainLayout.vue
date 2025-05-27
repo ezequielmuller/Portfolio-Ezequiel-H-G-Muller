@@ -3,11 +3,12 @@
     <!-- Header -->
     <q-header class="transparent-header">
       <q-toolbar>
-        <q-toolbar-title>
-          <q-icon name="code" /> Ezequiel H. G. Muller
-        </q-toolbar-title>
-        <!-- @click="scrollToSection('redes')" -->
         <div class="row q-col-gutter-xs">
+          <div class="col-xs-12 col-sm-auto col-md-auto">
+            <q-icon name="code" /> Ezequiel H. G. Muller
+          </div>
+          <!-- @click="scrollToSection('redes')" -->
+
           <div class="col-xs-6 col-sm- col-md-auto">
             <q-btn flat label="Me Conheça" style="text-transform: none;" />
           </div>
@@ -22,7 +23,7 @@
           </div>
         </div>
       </q-toolbar>
-      <q-separator color="grey-8" size="1px" inset />
+      <q-separator color="#EAEBFA" size="1px" inset />
     </q-header>
 
     <!-- Fundo de Vídeo
@@ -78,7 +79,7 @@
     <div id="ultima-div" class="row q-col-gutter-md"
       style="display: flex; justify-content: center; align-items: center; text-align: center;">
       <div class="col-md-4 col-sm-4 col-xs-12" style="display: flex; justify-content: center; align-items: center;">
-        <q-icon name="code" size="sm" /> Ezequiel H. G. Muller
+        <q-icon name="code" size="sm" /> Ezequiel H. G. Muller - Developer
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12" style="display: flex; justify-content: center; align-items: center;">
         <q-icon name="copyright" /> 2025 Ezequiel Muller - Todos os direitos reservados
