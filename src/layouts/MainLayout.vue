@@ -4,8 +4,8 @@
       <q-toolbar class="q-gutter-sm items-center justify-between q-col-gutter-sm">
         <div class="row items-center q-gutter-sm">
           <q-btn flat dense round icon="menu" @click="gerenciarMenu" class="q-mr-sm" />
-          <q-icon name="code" size="md" />
           <q-toolbar-title class="text-bold">Ezequiel H. G. Muller - Developer</q-toolbar-title>
+          <q-icon name="code" size="md" />
         </div>
       </q-toolbar>
       <q-separator color="#EAEBFA" size="1px" inset class="q-mt-sm" />
@@ -26,13 +26,14 @@
         <q-item clickable v-ripple>
           <q-item-section>Projetos</q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item>
           <q-item-section>
-            <q-btn label="Fale Comigo" no-caps color="primary" class="full-width" />
+            <q-btn label="Fale Comigo" no-caps color="primary" class="full-width" id="fale-cmg" rounded />
           </q-item-section>
         </q-item>
       </q-list>
     </q-drawer>
+
 
     <q-page-container>
       <router-view />
