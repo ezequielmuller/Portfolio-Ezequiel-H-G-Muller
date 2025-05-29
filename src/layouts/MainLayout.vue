@@ -1,111 +1,79 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <!-- Header -->
+  <q-layout view="hHh lpR fFf">
     <q-header class="transparent-header">
-      <q-toolbar>
-        <div class="row q-col-gutter-xs">
-          <div class="col-xs-12 col-sm-auto col-md-auto">
-            <q-icon name="code" /> Ezequiel H. G. Muller
-          </div>
-          <!-- @click="scrollToSection('redes')" -->
-
-          <div class="col-xs-6 col-sm- col-md-auto">
-            <q-btn flat label="Me Conheça" style="text-transform: none;" />
-          </div>
-          <div class="col-xs-6 col-sm-auto col-md-auto">
-            <q-btn flat label="Habilidades" style="text-transform: none;" />
-          </div>
-          <div class="col-xs-6 col-sm-auto col-md-auto">
-            <q-btn flat label="Redes Sociais" style="text-transform: none;" />
-          </div>
-          <div class="col-xs-6 col-sm-auto col-md-auto">
-            <q-btn flat label="Projetos" style="text-transform: none;" />
-          </div>
+      <q-toolbar class="q-gutter-sm items-center justify-between q-col-gutter-sm">
+        <div class="row items-center q-gutter-sm">
+          <q-btn flat dense round icon="menu" @click="gerenciarMenu" class="q-mr-sm" />
+          <q-icon name="code" size="md" />
+          <q-toolbar-title class="text-bold">Ezequiel H. G. Muller - Developer</q-toolbar-title>
         </div>
       </q-toolbar>
-      <q-separator color="#EAEBFA" size="1px" inset />
+      <q-separator color="#EAEBFA" size="1px" inset class="q-mt-sm" />
     </q-header>
 
-    <!-- Fundo de Vídeo
-    <div class="video-background">
-      <video autoplay muted loop id="background-video">
-        <source src="src/assets/fundo.mp4" type="video/mp4" />
-        Seu navegador não suporta a tag de vídeo.
-      </video>
-    </div> -->
+    <!-- Menu -->
+    <q-drawer v-model="menu" side="left" bordered show-if-above>
+      <q-list padding>
+        <q-item clickable v-ripple>
+          <q-item-section>Me Conheça</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section>Habilidades</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section>Redes Sociais</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section>Projetos</q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section>
+            <q-btn label="Fale Comigo" no-caps color="primary" class="full-width" />
+          </q-item-section>
+        </q-item>
+      </q-list>
+    </q-drawer>
 
-    <!-- Conteúdo principal -->
     <q-page-container>
-      <!--<div class="row q-col-gutter-md content-container">
-        <div class="col-md-3 col-sm-12 image-container">
-          <img src="src/assets/perfil.jpg" alt="Minha Foto" class="img-resized">
-        </div>
-        <div class="col-md-9 col-sm-12 text-container" style="color: #d0d0d0;">
-          <p>
-            Olá, meu nome é<span style="color:cornflowerblue;"> Ezequiel H. G. Müller</span>, sou de
-            <span style="color:cornflowerblue;"> Marcelino Ramos/RS</span> e tenho 18 anos.
-
-            Concluí em <span style="color:cornflowerblue;">2024</span> o Ensino Médio Integrado no
-            <span style="color:cornflowerblue;">Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul
-              (IFRS) – Campus Erechim</span>,
-            onde me formei como <span style="color:cornflowerblue;">Técnico em Informática</span>.
-          </p>
-          <p>
-            Atualmente, estou cursando <span style="color:cornflowerblue;">Bacharelado em Ciência da Computação</span>
-            na <em>Universidade
-              Regional Integrada do Alto Uruguai e das Missões (URI) – Campus Erechim</em>.
-          </p>
-        </div>
-      </div> -->
+      <router-view />
     </q-page-container>
 
-    <!-- Parte inferior (Footer) -->
-    <div class="row q-col-gutter-md">
-      <div class="col-md-12 col-sm-12 col-xs-12" style="display: flex; justify-content: right; align-items: center;">
-        <a href="https://github.com/ezequielmuller" target="_blank">
-          <q-btn flat icon="fab fa-github" size="md" class="rounded-btn btn" />
-        </a>
-        <a href="https://linkedin.com/in/ezequielhgmuller" target="_blank">
-          <q-btn flat icon="fab fa-linkedin" size="md" class="rounded-btn btn" />
-        </a>
-        <a href="https://www.instagram.com/ezequielmuller__/" target="_blank">
-          <q-btn flat icon="fab fa-instagram" size="md" class="rounded-btn btn" />
-        </a>
-        <a href="https://www.instagram.com/ezequielmuller__/" target="_blank">
-          <q-btn flat icon="fab fa-x-twitter" size="md" color="darkgrey" class="rounded-btn btn" />
-        </a>
+    <q-footer>
+      <div class="row q-col-gutter-md">
+        <div class="col-12 flex justify-end items-center">
+          <a href="https://github.com/ezequielmuller" target="_blank">
+            <q-btn flat icon="fab fa-github" size="md" class="rounded-btn btn" />
+          </a>
+          <a href="https://linkedin.com/in/ezequielhgmuller" target="_blank">
+            <q-btn flat icon="fab fa-linkedin" size="md" class="rounded-btn btn" />
+          </a>
+          <a href="https://www.instagram.com/ezequielmuller__/" target="_blank">
+            <q-btn flat icon="fab fa-instagram" size="md" class="rounded-btn btn" />
+          </a>
+          <a href="https://www.instagram.com/ezequielmuller__/" target="_blank">
+            <q-btn flat icon="fab fa-x-twitter" size="md" color="darkgrey" class="rounded-btn btn" />
+          </a>
+        </div>
       </div>
-    </div>
-    <div id="ultima-div" class="row q-col-gutter-md"
-      style="display: flex; justify-content: center; align-items: center; text-align: center;">
-      <div class="col-md-4 col-sm-4 col-xs-12" style="display: flex; justify-content: center; align-items: center;">
-        <q-icon name="code" size="sm" /> Ezequiel H. G. Muller - Developer
+      <div id="ultima-div" class="row q-col-gutter-md justify-center items-center text-center">
+        <div class="col-md-4 col-sm-4 col-xs-12 flex justify-center items-center">
+          <q-icon name="code" size="sm" /> Ezequiel H. G. Muller - Developer
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 flex justify-center items-center">
+          <q-icon name="copyright" /> 2025 Ezequiel Muller - Todos os direitos reservados
+        </div>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12" style="display: flex; justify-content: center; align-items: center;">
-        <q-icon name="copyright" /> 2025 Ezequiel Muller - Todos os direitos reservados
-      </div>
-    </div>
-
+    </q-footer>
   </q-layout>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
+const menu = ref(false)
 
-export default defineComponent({
-  setup() {
-    return {
-      codigo: ref('< />'),
-      leftDrawerOpen: ref(false),
-    }
-  },
-  methods: {
-    toggleLeftDrawer() {
-      this.leftDrawerOpen.value = !this.leftDrawerOpen.value
-    }
-  },
-  async mounted() {
 
-  }
-})
+const gerenciarMenu = () => {
+  menu.value = !menu.value
+}
+
 </script>
