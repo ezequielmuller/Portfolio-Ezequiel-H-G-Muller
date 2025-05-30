@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    asdasdasdasdasdasd
+    <div class="ancizar-sans">sadasdasdas </div>
   </q-page>
 </template>
 

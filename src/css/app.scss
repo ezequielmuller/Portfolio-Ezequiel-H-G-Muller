@@ -1,5 +1,8 @@
 // app global css in SCSS form
-$fundo: #e7e7e7;
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
   // background-color: rgb(18, 17, 22);
   background-color: $fundo;
@@ -12,14 +15,14 @@ body {
 }
 
 // Barra inferior
-#ultima-div {
+#rodape {
   box-shadow: none;
   align-items: center;
   font-size: 12px;
   text-align: left;
-  color: darkgray;
+  color: $fundo;
   background: $primary;
-  padding: 5px;
+  padding: 10px;
 }
 
 // Btn - Fale Comigo

@@ -3,9 +3,8 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: 'index', component: () => import('pages/IndexPage.vue') },
-      { path: '', component: () => import('pages/SobreMimPage.vue') },
-      // Adicione mais páginas aqui
+      { path: '/', component: () => import('pages/IndexPage.vue') },
+      { path: '/sobre-mim', component: () => import('pages/SobreMimPage.vue') },
     ],
   },
 
